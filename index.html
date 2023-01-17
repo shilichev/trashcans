@@ -372,12 +372,109 @@
         }
       }
 
+      .item_section h2 {
+        padding-bottom: 20px;
+      }
+
+      .item_section p {
+        padding-bottom: 30px;
+      }
+
+      .item_section__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .item_section__main_block {
+        width: 4.45rem;
+        height: 6.6rem;
+        margin-right: 0.6rem;
+        border: #160204 solid 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .item_section__text_block {
+        width: 60%;
+        padding-right: 20px;
+      }
+      .item_section__text_block p {
+        padding-bottom: 10px;
+      }
+
+      .item_section__text_block div {
+        padding-bottom: 50px;
+        display: flex;
+      }
+
+      .item_section__text_block h2 {
+        padding-right: 1.5rem;
+      }
+
+
+      .black {
+        width: 100%;
+      }
+
+      .wheel,
+      .top,
+      .right,
+      .profile {
+        display: none;
+      }
+
+      .block {
+        display: block !important;
+      }
+
       .presection {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         height: 2.8rem;
+      }
+
+      .sell_section__delivery_block {
+        height: 1.56rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 52px;
+      }
+
+      .sell_section__content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .sell_section__cities {
+        padding-top: 0.1rem;
+        padding-left: 0.3rem;
+      }
+
+      .item_section__selection_block {
+        display: flex;
+        flex-direction: column;
+        width: 1.15rem;
+      }
+
+      .item_section__selection_block div {
+        width: 1.15rem;
+        height: 1.15rem;
+        border: 1px solid #160204;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.175rem 0;
+      }
+
+      .item_section__selection_block div img {
+        height: 100%;
       }
 
       .footer_menu__block {
@@ -514,8 +611,102 @@
 
       <hr />
 
-      <section class="section_padding">
+      <section class="section_padding item_section">
         <h2>Бак мусорный с крышкой на колесах (120л)</h2>
+        <p>Артикул: МП-ТВ-944683</p>
+
+        <div class="item_section__main">
+          <div class="item_section__text_block">
+            <div>
+              <h2>150 BYN</h2>
+              <p>
+                Для заказа звоните по номеру: <br />
+                <span class="red">+375 (44) 555-55-55</span>
+              </p>
+            </div>
+
+            <p><span class="red">О товаре:</span></p>
+            <p><span class="red">Материал:</span> Полипропилен/Полиэтилен</p>
+
+            <p><span class="red">Габариты:</span> 505*580*900мм - (Д*Ш*В)</p>
+            <p><span class="red">Вес:</span> 9кг</p>
+            <p>
+              <span class="red">Комплектация:</span> Бак, крышка, 2 колеса, 2
+              фиксатора, ось
+            </p>
+            <p>
+              Контейнер объёмом 120 литров прекрасно подходит для сбора мусора
+              при небольшом количестве создаваемых отходов, то есть для
+              использования в коттеджных посёлках, дачных и садовых
+              товариществах, небольших магазинах и заведениях быстрого питания.
+            </p>
+            <p>
+              Контейнер оборудован крышкой, для изоляции от животных и птиц, а
+              также предотвращающей распространение возможных неприятных
+              запахов.
+            </p>
+          </div>
+
+          <div class="item_section__main_block" id="item_section__main_block">
+            <img
+              src="./images/colors/black/profile.png"
+              class="black profile block"
+              alt=""
+            />
+
+            <img
+              src="./images/colors/black/right.png"
+              class="black right"
+              alt=""
+            />
+            <img
+              src="./images/colors/black/top.jpeg"
+              class="black top"
+              alt=""
+            />
+            <img
+              src="./images/colors/black/wheel.png"
+              class="black wheel"
+              alt=""
+            />
+          </div>
+
+          <div class="item_section__selection_block black">
+            <div>
+              <img
+                src="./images/colors/black/profile.png"
+                class="click"
+                id="profile"
+                alt=""
+              />
+            </div>
+
+            <div>
+              <img
+                src="./images/colors/black/right.png"
+                class="click"
+                id="right"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="./images/colors/black/top.jpeg"
+                class="click"
+                id="top"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="./images/colors/black/wheel.png"
+                class="click"
+                id="wheel"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       <hr />
@@ -529,8 +720,37 @@
     </section>
     <main class="border">
       <hr />
-      <section class="section_padding">
+      <section class="section_padding sell_section">
         <h1>Доставка и оплата</h1>
+        <div class="sell_section__content">
+          <div class="sell_section__delivery_block">
+            <p>
+              <span class="red">Доставляем</span> по всей Беларуси. <br />
+              <span class="red">Бесплатная доставка</span> при заказе от 200
+              BYN.
+            </p>
+            <p>
+              <span class="red">Сроки доставки:</span> от 2 до 5 дней с 10:00 до
+              20:00.
+            </p>
+            <p>
+              <span class="red">Оплата</span> наличными или картой при получении
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <span class="red">Самовывоз</span> производится по следующим
+              адресам:
+            </p>
+            <div class="sell_section__cities">
+              <p>- г. Минск</p>
+              <p>- г. Брест</p>
+              <p>- г. Гродно</p>
+              <p>- г. Бобруйск</p>
+            </div>
+          </div>
+        </div>
       </section>
       <hr />
 
@@ -558,4 +778,22 @@
       <hr />
     </main>
   </body>
+  <footer>
+    <script>
+      const changeColor = (color) => {};
+
+      const changeType = (type) => {
+        console.log(type);
+        document.querySelector(".block").classList.remove("block");
+        document.querySelector("." + type).classList.add("block");
+      };
+      let click = document.getElementsByClassName("click");
+
+      for (let i = 0; i < click.length; i++) {
+        click[i].addEventListener("click", (event) => {
+          changeType(event.target.id);
+        });
+      }
+    </script>
+  </footer>
 </html>
