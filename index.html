@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +19,9 @@
     />
     <title>Trash</title>
     <style>
+      .display_none {
+        display: none !important;
+      }
       /* Указываем box sizing */
       *,
       *::before,
@@ -123,6 +127,231 @@
       @media screen and (max-width: 1080px) {
         html {
           font-size: 68px;
+        }
+      }
+
+      @media screen and (max-width: 975px) {
+        html {
+          font-size: 58px;
+        }
+      }
+
+      @media screen and (max-width: 827px) {
+        html {
+          font-size: 50px;
+        }
+      }
+
+      @media screen and (max-width: 712px) {
+        html {
+          font-size: 45px;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        html {
+          font-size: 40px;
+        }
+
+        header {
+          height: 70px !important;
+        }
+
+        .menu_item__block,
+        .menu__phone_number__block {
+          display: none !important;
+        }
+
+        .icon {
+          height: 80%;
+          width: auto !important;
+          max-height: 60px;
+        }
+        .main_section {
+          flex-direction: column;
+        }
+        .section_padding {
+          padding: 0.8rem 15px !important;
+        }
+
+        .main_section__text_block {
+          width: 100% !important;
+        }
+
+        p {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 0.37rem !important;
+          line-height: 0.4rem !important;
+          color: #160204;
+        }
+
+        .main_section__text_block {
+          height: 40vh !important;
+          min-height: 150px !important;
+        }
+
+        .main_section__text_block span {
+          padding-bottom: 15px;
+        }
+
+        .main_section img {
+          width: 90% !important;
+        }
+
+        button {
+          width: 150px !important;
+          height: 40px !important;
+          font-size: 18px !important;
+        }
+
+        .description_section__content {
+          flex-direction: column;
+          align-items: center !important;
+          width: 100% !important;
+        }
+
+        br {
+          display: none;
+        }
+
+        ul {
+          padding-inline-start: 0;
+          margin: 0;
+        }
+
+        li {
+          margin-bottom: 20px !important;
+        }
+
+        .description_section__title {
+          margin-bottom: 440px !important;
+          text-align: center;
+        }
+
+        .description_section__img {
+          width: 80% !important;
+          position: absolute;
+          top: 11% !important;
+          left: 11% !important;
+          margin-left: 0 !important;
+          margin-top: 0 !important;
+        }
+        .description_section__img_absolute {
+          position: absolute;
+          width: 58% !important;
+          top: 15% !important;
+          left: 22% !important;
+          margin-left: 0 !important;
+          margin-top: 0 !important;
+        }
+
+        .description_section__list {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 0.35rem !important;
+          line-height: 0.4rem !important;
+
+          color: #160204;
+        }
+
+        .item_section p {
+        }
+
+        .item_section__main {
+          flex-direction: column-reverse;
+        }
+
+        .item_section__text_block {
+          width: 100% !important;
+          padding: 0 !important;
+        }
+
+        .item_section__text_block h2 {
+          padding-right: 10px !important;
+        }
+
+        .item_section__text_block div {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding-bottom: 10px !important;
+        }
+
+        .circle_block {
+          position: absolute;
+          height: 30px;
+          top: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100% !important;
+        }
+
+        .presection {
+          height: 25vh !important;
+          min-height: 150px;
+        }
+
+        .sell_section__content {
+          flex-direction: column;
+          margin-top: 0px !important;
+          justify-content: flex-start;
+        }
+        .menu__burger {
+          display: block !important;
+          height: 40%;
+        }
+
+        .footer_contacts,
+        .footer_menu__block {
+          padding: 0 !important;
+        }
+
+        .menu__burger_items {
+          display: flex !important;
+          position: absolute;
+          right: 0;
+          height: auto;
+          top: 0;
+          width: auto;
+          background-color: #fdfdfd;
+          align-items: flex-start;
+          flex-direction: column;
+          background: #ffffff;
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+          border-radius: 0px;
+          z-index: 2;
+          padding-bottom: 25px;
+          width: 200px;
+        }
+
+        .menu__burger_items span {
+          padding-left: 20px;
+          font-family: "Oswald";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        .menu__burger_items img {
+          align-self: flex-end;
+          margin-left: 80px;
+          width: 40px;
+        }
+
+        .contacts {
+          align-self: start;
+          padding: 10px 20px 0  ;
+        }
+
+        .menu__phone_number__block_burger {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
         }
       }
 
@@ -269,7 +498,7 @@
 
       li span {
         position: relative;
-        left: -10px;
+        left: -0.01rem;
       }
 
       p {
@@ -304,6 +533,13 @@
         min-height: 400px;
         justify-content: space-between;
       }
+
+      .main_section__text_block span {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+      }
       .main_section__title_block {
         width: 100%;
         display: flex;
@@ -315,7 +551,7 @@
         color: white;
         width: 2.6rem;
         background-color: #982634;
-        height: 60px;
+        height: 0.62rem;
         font-family: "Oswald";
         font-style: normal;
         font-weight: 400;
@@ -345,7 +581,12 @@
       }
 
       .description_section__img {
-        width: 35%;
+        width: 32%;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        margin-left: -11%;
+        margin-top: -11%;
       }
       .description_section__img_absolute {
         position: absolute;
@@ -385,6 +626,7 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        position: relative;
       }
 
       .item_section__main_block {
@@ -413,20 +655,97 @@
         padding-right: 1.5rem;
       }
 
-
-      .black {
+      .item_section__main_block img {
         width: 100%;
+        max-height: 100%;
       }
 
-      .wheel,
+      .main,
+      .back,
+      .front,
       .top,
-      .right,
-      .profile {
-        display: none;
+      .bottom,
+      .black,
+      .blue,
+      .green,
+      .red_,
+      .yellow {
+        display: none !important;
+      }
+
+      .black,
+      .blue,
+      .green,
+      .red_,
+      .yellow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 60px;
+      }
+
+      .front {
+        width: auto !important;
       }
 
       .block {
         display: block !important;
+      }
+
+      .block_container {
+        display: flex !important;
+      }
+      .circle_block {
+        position: absolute;
+        height: 30px;
+        bottom: 8%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 3rem;
+        justify-content: space-around;
+        width: 70%;
+        padding: 0 0.5rem;
+      }
+
+      .block_container__with_colors {
+        position: relative;
+      }
+      .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .circle_active {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        outline: 6px double;
+        margin: 0 2px;
+        cursor: pointer;
+      }
+
+      #black {
+        background-color: #160204;
+      }
+
+      #green {
+        background-color: #61c24e;
+      }
+
+      #blue {
+        background-color: #025ea7;
+      }
+
+      #red_ {
+        background-color: #a01301;
+      }
+
+      #yellow {
+        background-color: #cbb500;
       }
 
       .presection {
@@ -461,6 +780,7 @@
         display: flex;
         flex-direction: column;
         width: 1.15rem;
+        position: relative;
       }
 
       .item_section__selection_block div {
@@ -471,6 +791,7 @@
         align-items: center;
         justify-content: center;
         margin: 0.175rem 0;
+        position: relative;
       }
 
       .item_section__selection_block div img {
@@ -493,6 +814,10 @@
         align-self: start;
         padding-left: 3.05rem;
       }
+      .menu__burger_items,
+      .menu__burger {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -514,6 +839,24 @@
         <span class="menu__phone_number">+375 (44) 555-55-55 </span>
         <span class="menu__phone_number">+375 (44) 222-22-22</span>
       </div>
+      <img
+        class="menu__burger"
+        id="open_burger"
+        src="./images/menu.png"
+        alt=""
+      />
+      <div class="display_none" id="burger">
+        <img src="./images/close.png" id="close_burger" alt="" />
+        <span class="menu_item">Главная</span>
+        <span class="menu_item">Описание</span>
+        <span class="menu_item">Товар</span>
+        <span class="menu_item">Доставка и Оплата</span>
+        <p class="contacts red">Контакты:</p>
+        <div class="menu__phone_number__block_burger">
+          <span class="">+375 (44) 555-55-55 </span>
+          <span class="">+375 (44) 222-22-22</span>
+        </div>
+      </div>
     </header>
 
     <hr />
@@ -530,7 +873,11 @@
             как для стационарных целей, так и при уборке территорий
           </p>
           <p class="red">Мы являемся официальным диллером завода ZETA PLAST</p>
-          <button>Заказать звонок</button>
+          <span
+            ><h2>150 BYN</h2>
+            <h2>—</h2>
+            <button>Заказать звонок</button></span
+          >
         </div>
 
         <img
@@ -620,12 +967,14 @@
             <div>
               <h2>150 BYN</h2>
               <p>
-                Для заказа звоните по номеру: <br />
+                Для заказа звоните по номеру: <br style="display: block" />
                 <span class="red">+375 (44) 555-55-55</span>
               </p>
             </div>
 
-            <p><span class="red">О товаре:</span></p>
+            <p>
+              <span class="red"><b>О товаре:</b> </span>
+            </p>
             <p><span class="red">Материал:</span> Полипропилен/Полиэтилен</p>
 
             <p><span class="red">Габариты:</span> 505*580*900мм - (Д*Ш*В)</p>
@@ -646,64 +995,368 @@
               запахов.
             </p>
           </div>
+          <div class="block_container__with_colors">
+            <div class="black block_container">
+              <div
+                class="item_section__main_block"
+                id="item_section__main_block"
+              >
+                <img
+                  src="./images/colors/black/main.png"
+                  class="main block"
+                  alt=""
+                />
 
-          <div class="item_section__main_block" id="item_section__main_block">
-            <img
-              src="./images/colors/black/profile.png"
-              class="black profile block"
-              alt=""
-            />
+                <img src="./images/colors/black/back.png" class="back" alt="" />
+                <img
+                  src="./images/colors/black/front.png"
+                  class="front"
+                  alt=""
+                />
+                <img
+                  src="./images/colors/black/bottom.png"
+                  class="bottom"
+                  alt=""
+                />
+                <img src="./images/colors/black/top.png" class="top" alt="" />
+              </div>
 
-            <img
-              src="./images/colors/black/right.png"
-              class="black right"
-              alt=""
-            />
-            <img
-              src="./images/colors/black/top.jpeg"
-              class="black top"
-              alt=""
-            />
-            <img
-              src="./images/colors/black/wheel.png"
-              class="black wheel"
-              alt=""
-            />
-          </div>
+              <div class="item_section__selection_block">
+                <div>
+                  <img
+                    src="./images/colors/black/main.png"
+                    class="click"
+                    id="main"
+                    alt=""
+                  />
+                </div>
 
-          <div class="item_section__selection_block black">
-            <div>
-              <img
-                src="./images/colors/black/profile.png"
-                class="click"
-                id="profile"
-                alt=""
-              />
+                <div>
+                  <img
+                    src="./images/colors/black/back.png"
+                    class="click"
+                    id="back"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/black/front.png"
+                    class="click"
+                    id="front"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/black/bottom.png"
+                    class="click"
+                    id="bottom"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/black/top.png"
+                    class="click"
+                    id="top"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
+            <!-- BLUE -->
+            <div class="blue">
+              <div
+                class="item_section__main_block"
+                id="item_section__main_block"
+              >
+                <img
+                  src="./images/colors/blue/main.png"
+                  class="main block"
+                  alt=""
+                />
 
-            <div>
-              <img
-                src="./images/colors/black/right.png"
-                class="click"
-                id="right"
-                alt=""
-              />
+                <img src="./images/colors/blue/back.png" class="back" alt="" />
+                <img
+                  src="./images/colors/blue/front.png"
+                  class="front"
+                  alt=""
+                />
+                <img
+                  src="./images/colors/blue/bottom.png"
+                  class="bottom"
+                  alt=""
+                />
+                <img src="./images/colors/blue/top.png" class="top" alt="" />
+              </div>
+
+              <div class="item_section__selection_block">
+                <div>
+                  <img
+                    src="./images/colors/blue/main.png"
+                    class="click"
+                    id="main"
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <img
+                    src="./images/colors/blue/back.png"
+                    class="click"
+                    id="back"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/blue/front.png"
+                    class="click"
+                    id="front"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/blue/bottom.png"
+                    class="click"
+                    id="bottom"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/blue/top.png"
+                    class="click"
+                    id="top"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <img
-                src="./images/colors/black/top.jpeg"
-                class="click"
-                id="top"
-                alt=""
-              />
+            <!-- BLUE -->
+
+            <!-- GREEN -->
+            <div class="green">
+              <div
+                class="item_section__main_block"
+                id="item_section__main_block"
+              >
+                <img
+                  src="./images/colors/green/main.png"
+                  class="main block"
+                  alt=""
+                />
+
+                <img src="./images/colors/green/back.png" class="back" alt="" />
+                <img
+                  src="./images/colors/green/front.png"
+                  class="front"
+                  alt=""
+                />
+                <img
+                  src="./images/colors/green/bottom.png"
+                  class="bottom"
+                  alt=""
+                />
+                <img src="./images/colors/green/top.png" class="top" alt="" />
+              </div>
+
+              <div class="item_section__selection_block">
+                <div>
+                  <img
+                    src="./images/colors/green/main.png"
+                    class="click"
+                    id="main"
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <img
+                    src="./images/colors/green/back.png"
+                    class="click"
+                    id="back"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/green/front.png"
+                    class="click"
+                    id="front"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/green/bottom.png"
+                    class="click"
+                    id="bottom"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/green/top.png"
+                    class="click"
+                    id="top"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <img
-                src="./images/colors/black/wheel.png"
-                class="click"
-                id="wheel"
-                alt=""
-              />
+            <!-- GREEN -->
+
+            <!-- RED -->
+            <div class="red_">
+              <div
+                class="item_section__main_block"
+                id="item_section__main_block"
+              >
+                <img
+                  src="./images/colors/red/main.png"
+                  class="main block"
+                  alt=""
+                />
+
+                <img src="./images/colors/red/back.png" class="back" alt="" />
+                <img src="./images/colors/red/front.png" class="front" alt="" />
+                <img
+                  src="./images/colors/red/bottom.png"
+                  class="bottom"
+                  alt=""
+                />
+                <img src="./images/colors/red/top.png" class="top" alt="" />
+              </div>
+
+              <div class="item_section__selection_block">
+                <div>
+                  <img
+                    src="./images/colors/red/main.png"
+                    class="click"
+                    id="main"
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <img
+                    src="./images/colors/red/back.png"
+                    class="click"
+                    id="back"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/red/front.png"
+                    class="click"
+                    id="front"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/red/bottom.png"
+                    class="click"
+                    id="bottom"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/red/top.png"
+                    class="click"
+                    id="top"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- RED -->
+            <!-- YELLOW -->
+            <div class="yellow">
+              <div
+                class="item_section__main_block"
+                id="item_section__main_block"
+              >
+                <img
+                  src="./images/colors/yellow/main.png"
+                  class="main block"
+                  alt=""
+                />
+
+                <img
+                  src="./images/colors/yellow/back.png"
+                  class="back"
+                  alt=""
+                />
+                <img
+                  src="./images/colors/yellow/front.png"
+                  class="front"
+                  alt=""
+                />
+                <img
+                  src="./images/colors/yellow/bottom.png"
+                  class="bottom"
+                  alt=""
+                />
+                <img src="./images/colors/yellow/top.png" class="top" alt="" />
+              </div>
+
+              <div class="item_section__selection_block">
+                <div>
+                  <img
+                    src="./images/colors/yellow/main.png"
+                    class="click"
+                    id="main"
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <img
+                    src="./images/colors/yellow/back.png"
+                    class="click"
+                    id="back"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/yellow/front.png"
+                    class="click"
+                    id="front"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/yellow/bottom.png"
+                    class="click"
+                    id="bottom"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/colors/yellow/top.png"
+                    class="click"
+                    id="top"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- YELLOW -->
+            <div class="circle_block">
+              <div class="circle_active change_color" id="black"></div>
+              <div class="circle change_color" id="blue"></div>
+              <div class="circle change_color" id="red_"></div>
+              <div class="circle change_color" id="green"></div>
+              <div class="circle change_color" id="yellow"></div>
             </div>
           </div>
         </div>
@@ -780,20 +1433,63 @@
   </body>
   <footer>
     <script>
-      const changeColor = (color) => {};
-
       const changeType = (type) => {
-        console.log(type);
-        document.querySelector(".block").classList.remove("block");
-        document.querySelector("." + type).classList.add("block");
+        const typeList = document.getElementsByClassName(type);
+        const blockList = document.querySelectorAll(".block");
+        for (let i = 0; i < blockList.length; i++) {
+          blockList[i].classList.remove("block");
+        }
+        for (let i = 0; i < typeList.length; i++) {
+          typeList[i].classList.add("block");
+        }
       };
+
+      const changeColor = (color) => {
+        document.querySelector(".circle_active").classList.add("circle");
+        document
+          .querySelector(".circle_active")
+          .classList.remove("circle_active");
+        document.querySelector("#" + color).classList.remove("circle");
+        document.querySelector("#" + color).classList.add("circle_active");
+        // block_container
+        document
+          .querySelector(".block_container")
+          .classList.remove("block_container");
+        document.querySelector("." + color).classList.add("block_container");
+        changeType("main");
+      };
+
       let click = document.getElementsByClassName("click");
+      let changeColorList = document.getElementsByClassName("change_color");
 
       for (let i = 0; i < click.length; i++) {
         click[i].addEventListener("click", (event) => {
           changeType(event.target.id);
         });
       }
+
+      for (let i = 0; i < click.length; i++) {
+        changeColorList[i].addEventListener("click", (event) => {
+          changeColor(event.target.id);
+        });
+      }
+    </script>
+    <script>
+      const burger = document.getElementById("burger");
+
+      document
+        .getElementById("open_burger")
+        .addEventListener("click", (event) => {
+          // .menu__burger_items
+          burger.classList.remove("display_none");
+          burger.classList.add("menu__burger_items");
+        });
+      document
+        .getElementById("close_burger")
+        .addEventListener("click", (event) => {
+          burger.classList.remove("menu__burger_items");
+          burger.classList.add("display_none");
+        });
     </script>
   </footer>
 </html>
