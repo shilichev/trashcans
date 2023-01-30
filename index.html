@@ -208,7 +208,6 @@
 
         .description_section__content {
           flex-direction: column;
-          align-items: center !important;
           width: 100% !important;
         }
 
@@ -226,23 +225,23 @@
         }
 
         .description_section__title {
-          margin-bottom: 440px !important;
+          margin-bottom: 80vw !important;
           text-align: center;
         }
 
         .description_section__img {
-          width: 80% !important;
+          width: 50% !important;
           position: absolute;
           top: 11% !important;
-          left: 11% !important;
+          left: 25% !important;
           margin-left: 0 !important;
           margin-top: 0 !important;
         }
         .description_section__img_absolute {
           position: absolute;
-          width: 58% !important;
+          width: 36% !important;
           top: 15% !important;
-          left: 22% !important;
+          left: 32% !important;
           margin-left: 0 !important;
           margin-top: 0 !important;
         }
@@ -326,6 +325,8 @@
           z-index: 2;
           padding-bottom: 25px;
           width: 200px;
+          padding-top: 10px;
+          padding-right: 10px;
         }
 
         .menu__burger_items span {
@@ -345,7 +346,7 @@
 
         .contacts {
           align-self: start;
-          padding: 10px 20px 0  ;
+          padding: 10px 20px 0;
         }
 
         .menu__phone_number__block_burger {
@@ -818,6 +819,119 @@
       .menu__burger {
         display: none;
       }
+
+      a:active, /* активная/посещенная ссылка */
+      a:hover,  /* при наведении */
+        a {
+        text-decoration: none;
+        color: #160204;
+      }
+
+      @media screen and (max-width: 340px) {
+        html {
+          font-size: 32px;
+        }
+
+        .circle_block {
+          top: 85% !important;
+        }
+      }
+
+
+
+
+      @media screen and (max-width: 400px) {
+        .description_section__img {
+          width: 80% !important;
+          position: absolute;
+          top: 11% !important;
+          left: 11% !important;
+          margin-left: 0 !important;
+          margin-top: 0 !important;
+        }
+        .description_section__img_absolute {
+          position: absolute;
+          width: 58% !important;
+          top: 15% !important;
+          left: 22% !important;
+          margin-left: 0 !important;
+          margin-top: 0 !important;
+        }
+
+
+        .description_section__title {
+          margin-bottom: 440px !important;
+          text-align: center;
+        }
+
+     
+      }
+
+      .modal-wrapper {
+position:fixed;
+display:flex;
+align-items:center;
+justify-content:center;
+top:0px;
+left:0px;
+width:100vw;
+height:100vh;
+}
+
+.modal { 
+  font-size: 16px;
+  width: 6.5rem;
+  height: 4rem;
+  max-width: 600px;
+  min-width: 300px;
+
+  max-height: 350px;
+  min-height: 230px;
+  background: #FDFDFD;
+box-shadow: 0px 0px 23px 1000px rgba(0, 0, 0, 0.15);
+border-radius: 20px;
+
+display: flex;
+align-items: center;
+flex-direction: column;
+padding: 0.40rem;
+
+font-family: "Raleway";
+justify-content: space-around;
+position: relative;
+}
+
+.modal p {
+  text-align: center;
+}
+
+.modal form input {
+  border: 1px solid #160204;
+border-radius: 10px;
+padding: 6px;
+padding-left: 10px;
+}
+
+.modal form label{
+padding-left: 10px;
+}
+
+.modal form {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+.modal img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+}
+
+.modal-wrapper_closed{
+  display: none;
+}
     </style>
   </head>
   <body>
@@ -828,16 +942,16 @@
         alt=""
       />
       <div class="menu_item__block">
-        <span class="menu_item">Главная</span>
-        <span class="menu_item">Описание</span>
-        <span class="menu_item">Товар</span>
-        <span class="menu_item">Доставка и Оплата</span>
-        <span class="menu_item">Контакты</span>
+        <span class="menu_item"> <a href="#main"> Главная</a></span>
+        <span class="menu_item"> <a href="#description">Описание</a></span>
+        <span class="menu_item"><a href="#sell">Товар</a></span>
+        <span class="menu_item"><a href="#payment">Доставка и Оплата</a></span>
+        <span class="menu_item"><a href="#contacts">Контакты</a></span>
       </div>
 
       <div class="menu__phone_number__block">
-        <span class="menu__phone_number">+375 (44) 555-55-55 </span>
-        <span class="menu__phone_number">+375 (44) 222-22-22</span>
+        <span class="menu__phone_number" > <a class="red" href="tel:+375445555555">+375 (44) 555-55-55</a>  </span>
+        <span class="menu__phone_number"><a class="red" href="tel:+3754422222222">+375 (44) 222-22-22</a></span>
       </div>
       <img
         class="menu__burger"
@@ -847,21 +961,23 @@
       />
       <div class="display_none" id="burger">
         <img src="./images/close.png" id="close_burger" alt="" />
-        <span class="menu_item">Главная</span>
-        <span class="menu_item">Описание</span>
-        <span class="menu_item">Товар</span>
-        <span class="menu_item">Доставка и Оплата</span>
-        <p class="contacts red">Контакты:</p>
+        <!-- //section -->
+        <span class="menu_item"> <a href="#main"> Главная</a></span>
+        <span class="menu_item"> <a href="#description">Описание</a></span>
+        <span class="menu_item"><a href="#sell">Товар</a></span>
+        <span class="menu_item"><a href="#payment">Доставка и Оплата</span>
+        <p class="contacts red">Контакты:</a></p>
         <div class="menu__phone_number__block_burger">
-          <span class="">+375 (44) 555-55-55 </span>
-          <span class="">+375 (44) 222-22-22</span>
+          <span class=""><a class="red" href="tel:+375445555555"> +375 (44) 555-55-55 </a> </span>
+          <span class=""> <a class="red" href="tel:+375442222222">+375 (44) 222-22-22 </a></span>
         </div>
       </div>
     </header>
 
     <hr />
     <main class="border">
-      <section class="main_section section_padding">
+      <div class="call"></div>
+      <section id="main" class="main_section section_padding">
         <div class="main_section__text_block">
           <div class="main_section__title_block">
             <h1>Мусорный бак</h1>
@@ -876,7 +992,7 @@
           <span
             ><h2>150 BYN</h2>
             <h2>—</h2>
-            <button>Заказать звонок</button></span
+            <button class="open-modal">Заказать звонок</button></span
           >
         </div>
 
@@ -887,7 +1003,7 @@
       </section>
       <hr />
 
-      <section class="description_section section_padding">
+      <section id="description" class="description_section section_padding">
         <h1 class="description_section__title">Чем он хорош</h1>
         <div class="description_section__content">
           <ul>
@@ -958,7 +1074,7 @@
 
       <hr />
 
-      <section class="section_padding item_section">
+      <section id="sell" class="section_padding item_section">
         <h2>Бак мусорный с крышкой на колесах (120л)</h2>
         <p>Артикул: МП-ТВ-944683</p>
 
@@ -1369,11 +1485,11 @@
         Вы также можете заказать звонок и менеджер обязательно наберёт в
         ближайшее время
       </p>
-      <button>Заказать звонок</button>
+      <button class="open-modal">Заказать звонок</button>
     </section>
     <main class="border">
       <hr />
-      <section class="section_padding sell_section">
+      <section id="payment" class="section_padding sell_section">
         <h1>Доставка и оплата</h1>
         <div class="sell_section__content">
           <div class="sell_section__delivery_block">
@@ -1407,7 +1523,7 @@
       </section>
       <hr />
 
-      <section class="section_padding footer_section">
+      <section id="contacts" class="section_padding footer_section">
         <img
           class="icon"
           src="data:image/png;base64,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"
@@ -1429,6 +1545,20 @@
         </div>
       </section>
       <hr />
+      <div class="modal-wrapper_closed" id="modal">
+        <div class="modal">
+          <img src="./images/close.png" id="close_modal" alt="" />
+          <p>Оставьте ваш номер и мы перезвоним вам в ближайшее время </p>
+          <form action="">          
+            
+            <label for="phone" class="red">Номер телефона</label><input type="tel" id="phone" name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required /></form>
+
+
+            <button type="submit">Заказать звонок</button>
+        </div>
+       </div>
     </main>
   </body>
   <footer>
@@ -1490,6 +1620,24 @@
           burger.classList.remove("menu__burger_items");
           burger.classList.add("display_none");
         });
+    </script>
+    <script>
+     let buttonOpenModal = document.getElementsByClassName("open-modal");
+      let buttonCloseModal = document.getElementById('close_modal')
+
+     for(let i = 0; i< buttonOpenModal.length; i++ ){
+      buttonOpenModal[i].addEventListener('click', ()=> {
+        document.getElementById('modal').classList.add('modal-wrapper')
+        document.getElementById('modal').classList.remove('modal-wrapper_closed')
+            })
+     }
+
+
+     const closeModal =()=> {
+      document.getElementById('modal').classList.remove('modal-wrapper')
+        document.getElementById('modal').classList.add('modal-wrapper_closed')
+     } 
+     buttonCloseModal.addEventListener('click', ()=> {closeModal()})
     </script>
   </footer>
 </html>
