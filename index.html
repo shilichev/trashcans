@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/@sendgrid/mail@^6.5.0/dist/sendgrid-mai l.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap"
       rel="stylesheet"
@@ -837,9 +843,6 @@
         }
       }
 
-
-
-
       @media screen and (max-width: 400px) {
         .description_section__img {
           width: 80% !important;
@@ -858,80 +861,77 @@
           margin-top: 0 !important;
         }
 
-
         .description_section__title {
           margin-bottom: 440px !important;
           text-align: center;
         }
-
-     
       }
 
       .modal-wrapper {
-position:fixed;
-display:flex;
-align-items:center;
-justify-content:center;
-top:0px;
-left:0px;
-width:100vw;
-height:100vh;
-}
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+      }
 
-.modal { 
-  font-size: 16px;
-  width: 6.5rem;
-  height: 4rem;
-  max-width: 600px;
-  min-width: 300px;
+      .modal {
+        font-size: 16px;
+        width: 6.5rem;
+        height: 4rem;
+        max-width: 600px;
+        min-width: 300px;
 
-  max-height: 350px;
-  min-height: 230px;
-  background: #FDFDFD;
-box-shadow: 0px 0px 23px 1000px rgba(0, 0, 0, 0.15);
-border-radius: 20px;
+        max-height: 350px;
+        min-height: 230px;
+        background: #fdfdfd;
+        box-shadow: 0px 0px 23px 1000px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
 
-display: flex;
-align-items: center;
-flex-direction: column;
-padding: 0.40rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.4rem;
 
-font-family: "Raleway";
-justify-content: space-around;
-position: relative;
-}
+        font-family: "Raleway";
+        justify-content: space-around;
+        position: relative;
+      }
 
-.modal p {
-  text-align: center;
-}
+      .modal p {
+        text-align: center;
+      }
 
-.modal form input {
-  border: 1px solid #160204;
-border-radius: 10px;
-padding: 6px;
-padding-left: 10px;
-}
+      .modal form input {
+        border: 1px solid #160204;
+        border-radius: 10px;
+        padding: 6px;
+        padding-left: 10px;
+      }
 
-.modal form label{
-padding-left: 10px;
-}
+      .modal form label {
+        padding-left: 10px;
+      }
 
-.modal form {
-  align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-right: 3rem;
-}
-.modal img {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 30px;
-}
+      .modal form {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin-right: 3rem;
+      }
+      .modal img {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+      }
 
-.modal-wrapper_closed{
-  display: none;
-}
+      .modal-wrapper_closed {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -950,8 +950,14 @@ padding-left: 10px;
       </div>
 
       <div class="menu__phone_number__block">
-        <span class="menu__phone_number" > <a class="red" href="tel:+375445555555">+375 (44) 555-55-55</a>  </span>
-        <span class="menu__phone_number"><a class="red" href="tel:+3754422222222">+375 (44) 222-22-22</a></span>
+        <span class="menu__phone_number">
+          <a class="red" href="tel:+375445555555">+375 (44) 555-55-55</a>
+        </span>
+        <span class="menu__phone_number"
+          ><a class="red" href="tel:+3754422222222"
+            >+375 (44) 222-22-22</a
+          ></span
+        >
       </div>
       <img
         class="menu__burger"
@@ -965,11 +971,17 @@ padding-left: 10px;
         <span class="menu_item"> <a href="#main"> Главная</a></span>
         <span class="menu_item"> <a href="#description">Описание</a></span>
         <span class="menu_item"><a href="#sell">Товар</a></span>
-        <span class="menu_item"><a href="#payment">Доставка и Оплата</span>
-        <p class="contacts red">Контакты:</a></p>
+        <span class="menu_item"><a href="#payment">Доставка и Оплата</a></span>
+        <p class="contacts red">Контакты:</p>
         <div class="menu__phone_number__block_burger">
-          <span class=""><a class="red" href="tel:+375445555555"> +375 (44) 555-55-55 </a> </span>
-          <span class=""> <a class="red" href="tel:+375442222222">+375 (44) 222-22-22 </a></span>
+          <span class=""
+            ><a class="red" href="tel:+375445555555"> +375 (44) 555-55-55 </a>
+          </span>
+          <span class="">
+            <a class="red" href="tel:+375442222222"
+              >+375 (44) 222-22-22
+            </a></span
+          >
         </div>
       </div>
     </header>
@@ -1118,29 +1130,29 @@ padding-left: 10px;
                 id="item_section__main_block"
               >
                 <img
-                  src="./images/colors/black/main.png"
+                  src="./images/colors/black/main.webp"
                   class="main block"
                   alt=""
                 />
 
-                <img src="./images/colors/black/back.png" class="back" alt="" />
+                <img src="./images/colors/black/back.webp" class="back" alt="" />
                 <img
-                  src="./images/colors/black/front.png"
+                  src="./images/colors/black/front.webp"
                   class="front"
                   alt=""
                 />
                 <img
-                  src="./images/colors/black/bottom.png"
+                  src="./images/colors/black/bottom.webp"
                   class="bottom"
                   alt=""
                 />
-                <img src="./images/colors/black/top.png" class="top" alt="" />
+                <img src="./images/colors/black/top.webp" class="top" alt="" />
               </div>
 
               <div class="item_section__selection_block">
                 <div>
                   <img
-                    src="./images/colors/black/main.png"
+                    src="./images/colors/black/main.webp"
                     class="click"
                     id="main"
                     alt=""
@@ -1149,7 +1161,7 @@ padding-left: 10px;
 
                 <div>
                   <img
-                    src="./images/colors/black/back.png"
+                    src="./images/colors/black/back.webp"
                     class="click"
                     id="back"
                     alt=""
@@ -1157,7 +1169,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/black/front.png"
+                    src="./images/colors/black/front.webp"
                     class="click"
                     id="front"
                     alt=""
@@ -1165,7 +1177,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/black/bottom.png"
+                    src="./images/colors/black/bottom.webp"
                     class="click"
                     id="bottom"
                     alt=""
@@ -1173,7 +1185,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/black/top.png"
+                    src="./images/colors/black/top.webp"
                     class="click"
                     id="top"
                     alt=""
@@ -1188,29 +1200,29 @@ padding-left: 10px;
                 id="item_section__main_block"
               >
                 <img
-                  src="./images/colors/blue/main.png"
+                  src="./images/colors/blue/main.webp"
                   class="main block"
                   alt=""
                 />
 
-                <img src="./images/colors/blue/back.png" class="back" alt="" />
+                <img src="./images/colors/blue/back.webp" class="back" alt="" />
                 <img
-                  src="./images/colors/blue/front.png"
+                  src="./images/colors/blue/front.webp"
                   class="front"
                   alt=""
                 />
                 <img
-                  src="./images/colors/blue/bottom.png"
+                  src="./images/colors/blue/bottom.webp"
                   class="bottom"
                   alt=""
                 />
-                <img src="./images/colors/blue/top.png" class="top" alt="" />
+                <img src="./images/colors/blue/top.webp" class="top" alt="" />
               </div>
 
               <div class="item_section__selection_block">
                 <div>
                   <img
-                    src="./images/colors/blue/main.png"
+                    src="./images/colors/blue/main.webp"
                     class="click"
                     id="main"
                     alt=""
@@ -1219,7 +1231,7 @@ padding-left: 10px;
 
                 <div>
                   <img
-                    src="./images/colors/blue/back.png"
+                    src="./images/colors/blue/back.webp"
                     class="click"
                     id="back"
                     alt=""
@@ -1227,7 +1239,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/blue/front.png"
+                    src="./images/colors/blue/front.webp"
                     class="click"
                     id="front"
                     alt=""
@@ -1235,7 +1247,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/blue/bottom.png"
+                    src="./images/colors/blue/bottom.webp"
                     class="click"
                     id="bottom"
                     alt=""
@@ -1243,7 +1255,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/blue/top.png"
+                    src="./images/colors/blue/top.webp"
                     class="click"
                     id="top"
                     alt=""
@@ -1260,29 +1272,29 @@ padding-left: 10px;
                 id="item_section__main_block"
               >
                 <img
-                  src="./images/colors/green/main.png"
+                  src="./images/colors/green/main.webp"
                   class="main block"
                   alt=""
                 />
 
-                <img src="./images/colors/green/back.png" class="back" alt="" />
+                <img src="./images/colors/green/back.webp" class="back" alt="" />
                 <img
-                  src="./images/colors/green/front.png"
+                  src="./images/colors/green/front.webp"
                   class="front"
                   alt=""
                 />
                 <img
-                  src="./images/colors/green/bottom.png"
+                  src="./images/colors/green/bottom.webp"
                   class="bottom"
                   alt=""
                 />
-                <img src="./images/colors/green/top.png" class="top" alt="" />
+                <img src="./images/colors/green/top.webp" class="top" alt="" />
               </div>
 
               <div class="item_section__selection_block">
                 <div>
                   <img
-                    src="./images/colors/green/main.png"
+                    src="./images/colors/green/main.webp"
                     class="click"
                     id="main"
                     alt=""
@@ -1291,7 +1303,7 @@ padding-left: 10px;
 
                 <div>
                   <img
-                    src="./images/colors/green/back.png"
+                    src="./images/colors/green/back.webp"
                     class="click"
                     id="back"
                     alt=""
@@ -1299,7 +1311,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/green/front.png"
+                    src="./images/colors/green/front.webp"
                     class="click"
                     id="front"
                     alt=""
@@ -1307,7 +1319,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/green/bottom.png"
+                    src="./images/colors/green/bottom.webp"
                     class="click"
                     id="bottom"
                     alt=""
@@ -1315,7 +1327,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/green/top.png"
+                    src="./images/colors/green/top.webp"
                     class="click"
                     id="top"
                     alt=""
@@ -1332,25 +1344,25 @@ padding-left: 10px;
                 id="item_section__main_block"
               >
                 <img
-                  src="./images/colors/red/main.png"
+                  src="./images/colors/red/main.webp"
                   class="main block"
                   alt=""
                 />
 
-                <img src="./images/colors/red/back.png" class="back" alt="" />
-                <img src="./images/colors/red/front.png" class="front" alt="" />
+                <img src="./images/colors/red/back.webp" class="back" alt="" />
+                <img src="./images/colors/red/front.webp" class="front" alt="" />
                 <img
-                  src="./images/colors/red/bottom.png"
+                  src="./images/colors/red/bottom.webp"
                   class="bottom"
                   alt=""
                 />
-                <img src="./images/colors/red/top.png" class="top" alt="" />
+                <img src="./images/colors/red/top.webp" class="top" alt="" />
               </div>
 
               <div class="item_section__selection_block">
                 <div>
                   <img
-                    src="./images/colors/red/main.png"
+                    src="./images/colors/red/main.webp"
                     class="click"
                     id="main"
                     alt=""
@@ -1359,7 +1371,7 @@ padding-left: 10px;
 
                 <div>
                   <img
-                    src="./images/colors/red/back.png"
+                    src="./images/colors/red/back.webp"
                     class="click"
                     id="back"
                     alt=""
@@ -1367,7 +1379,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/red/front.png"
+                    src="./images/colors/red/front.webp"
                     class="click"
                     id="front"
                     alt=""
@@ -1375,7 +1387,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/red/bottom.png"
+                    src="./images/colors/red/bottom.webp"
                     class="click"
                     id="bottom"
                     alt=""
@@ -1383,7 +1395,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/red/top.png"
+                    src="./images/colors/red/top.webp"
                     class="click"
                     id="top"
                     alt=""
@@ -1399,33 +1411,33 @@ padding-left: 10px;
                 id="item_section__main_block"
               >
                 <img
-                  src="./images/colors/yellow/main.png"
+                  src="./images/colors/yellow/main.webp"
                   class="main block"
                   alt=""
                 />
 
                 <img
-                  src="./images/colors/yellow/back.png"
+                  src="./images/colors/yellow/back.webp"
                   class="back"
                   alt=""
                 />
                 <img
-                  src="./images/colors/yellow/front.png"
+                  src="./images/colors/yellow/front.webp"
                   class="front"
                   alt=""
                 />
                 <img
-                  src="./images/colors/yellow/bottom.png"
+                  src="./images/colors/yellow/bottom.webp"
                   class="bottom"
                   alt=""
                 />
-                <img src="./images/colors/yellow/top.png" class="top" alt="" />
+                <img src="./images/colors/yellow/top.webp" class="top" alt="" />
               </div>
 
               <div class="item_section__selection_block">
                 <div>
                   <img
-                    src="./images/colors/yellow/main.png"
+                    src="./images/colors/yellow/main.webp"
                     class="click"
                     id="main"
                     alt=""
@@ -1434,7 +1446,7 @@ padding-left: 10px;
 
                 <div>
                   <img
-                    src="./images/colors/yellow/back.png"
+                    src="./images/colors/yellow/back.webp"
                     class="click"
                     id="back"
                     alt=""
@@ -1442,7 +1454,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/yellow/front.png"
+                    src="./images/colors/yellow/front.webp"
                     class="click"
                     id="front"
                     alt=""
@@ -1450,7 +1462,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/yellow/bottom.png"
+                    src="./images/colors/yellow/bottom.webp"
                     class="click"
                     id="bottom"
                     alt=""
@@ -1458,7 +1470,7 @@ padding-left: 10px;
                 </div>
                 <div>
                   <img
-                    src="./images/colors/yellow/top.png"
+                    src="./images/colors/yellow/top.webp"
                     class="click"
                     id="top"
                     alt=""
@@ -1548,17 +1560,15 @@ padding-left: 10px;
       <div class="modal-wrapper_closed" id="modal">
         <div class="modal">
           <img src="./images/close.png" id="close_modal" alt="" />
-          <p>Оставьте ваш номер и мы перезвоним вам в ближайшее время </p>
-          <form action="">          
-            
-            <label for="phone" class="red">Номер телефона</label><input type="tel" id="phone" name="phone"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            required /></form>
+          <p>Оставьте ваш номер и мы перезвоним вам в ближайшее время</p>
+          <form>
+            <label for="phone" class="red">Номер телефона</label
+            ><input type="tel" id="phone" name="phone" />
+          </form>
 
-
-            <button type="submit">Заказать звонок</button>
+          <button id="sendButton">Заказать звонок</button>
         </div>
-       </div>
+      </div>
     </main>
   </body>
   <footer>
@@ -1604,6 +1614,7 @@ padding-left: 10px;
         });
       }
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       const burger = document.getElementById("burger");
 
@@ -1622,22 +1633,52 @@ padding-left: 10px;
         });
     </script>
     <script>
-     let buttonOpenModal = document.getElementsByClassName("open-modal");
-      let buttonCloseModal = document.getElementById('close_modal')
+      let buttonOpenModal = document.getElementsByClassName("open-modal");
+      let buttonCloseModal = document.getElementById("close_modal");
 
-     for(let i = 0; i< buttonOpenModal.length; i++ ){
-      buttonOpenModal[i].addEventListener('click', ()=> {
-        document.getElementById('modal').classList.add('modal-wrapper')
-        document.getElementById('modal').classList.remove('modal-wrapper_closed')
-            })
-     }
+      for (let i = 0; i < buttonOpenModal.length; i++) {
+        buttonOpenModal[i].addEventListener("click", () => {
+          document.getElementById("modal").classList.add("modal-wrapper");
+          document
+            .getElementById("modal")
+            .classList.remove("modal-wrapper_closed");
+        });
+      }
 
+      const closeModal = () => {
+        document.getElementById("modal").classList.remove("modal-wrapper");
+        document.getElementById("modal").classList.add("modal-wrapper_closed");
+      };
+      buttonCloseModal.addEventListener("click", () => {
+        closeModal();
+      });
+    </script>
+    <script>
+      document.getElementById("sendButton").addEventListener("click", () => {
+        sendMail();
+      });
 
-     const closeModal =()=> {
-      document.getElementById('modal').classList.remove('modal-wrapper')
-        document.getElementById('modal').classList.add('modal-wrapper_closed')
-     } 
-     buttonCloseModal.addEventListener('click', ()=> {closeModal()})
+      function sendMail() {
+        let param = document.getElementById("phone").value;
+
+        var params = {
+          phone_number: param,
+        };
+
+        const serviceID = "service_fmn7s7e";
+
+        const templateID = "template_cif11ll";
+
+        emailjs.init("eSua8OHML5ATbXYKh");
+        emailjs
+          .send(serviceID, templateID, params)
+
+          .then((res) => {
+            closeModal();
+          })
+
+          .catch((err) => {alert("Something went wrong, try again later")});
+      }
     </script>
   </footer>
 </html>
